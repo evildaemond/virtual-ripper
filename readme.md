@@ -1,6 +1,6 @@
 # Virtual Ripper
 
-Virtual Ripper is a rules based virtual disk scanner, that uses the base of (adiskreader)[https://github.com/skelsec/adiskreader] to run a set of rules against a virtual disk file and read or extract contents.
+Virtual Ripper is a rules based virtual disk scanner, that uses the base of [adiskreader](https://github.com/skelsec/adiskreader) to run a set of rules against a virtual disk file and read or extract contents.
 
 ## Requirements
 
@@ -94,3 +94,4 @@ The action to take for the task based on the rule triggering
 - `treedir` - Create a tree of the directory or location, and put the tree in the loot folder
 - `registry_get_keys` - Get all keys and values from a registry path
 - `registry_get_value` -  Get a specific value from a registry path
+
