@@ -1,0 +1,12 @@
+{
+    "rulename": "Read Registry Keys - CloudDomainJoin - TenantInfo",
+    "selector": "None",
+    "operation": "registry",
+    "rule": {
+        "matchtype": "fullpath",
+        "action": "registry_get_keys",
+        "match": [
+            "HKLM:\\SYSTEM\\{currentControlSet}\\Control\\CloudDomainJoin\\TenantInfo"
+        ]
+    }
+}

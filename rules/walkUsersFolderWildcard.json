@@ -1,0 +1,14 @@
+{
+    "rulename": "Walk All Users Folder - Wildcard",
+    "selector": "None",
+    "operation": "filesystem",
+    "rule": {
+        "matchtype": "fullpath",
+        "action": "walk",
+        "maxdepth": 5,
+        "extractLocation": "dirwalk",
+        "match": [
+            "Users\\*\\"
+        ]
+    }
+}

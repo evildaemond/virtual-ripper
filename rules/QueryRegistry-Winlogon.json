@@ -1,0 +1,12 @@
+{
+    "rulename": "Read Registry Keys - WinLogon Info",
+    "selector": "None",
+    "operation": "registry",
+    "rule": {
+        "matchtype": "fullpath",
+        "action": "registry_get_keys",
+        "match": [
+            "HKLM:\\SOFTWARE\\\\Microsoft\\Windows NT\\CurrentVersion\\Winlogon"
+        ]
+    }
+}

@@ -1,0 +1,16 @@
+{
+    "rulename": "CollectRegistry",
+    "selector": "None",
+    "operation": "filesystem",
+    "rule": {
+        "matchtype": "fullpath",
+        "action": "extract",
+        "extractLocation": "registry",
+        "match": [
+            "Windows\\System32\\config\\SAM",
+            "Windows\\System32\\config\\SYSTEM",
+            "Windows\\System32\\config\\SECURITY",
+            "Windows\\System32\\config\\SOFTWARE"
+        ]
+    }
+}

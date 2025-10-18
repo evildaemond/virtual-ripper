@@ -1,0 +1,14 @@
+{
+    "rulename": "Walk Root Directory - Max Depth 2",
+    "selector": "None",
+    "operation": "filesystem",
+    "rule": {
+        "matchtype": "fullpath",
+        "action": "walk",
+        "maxdepth": 3,
+        "extractLocation": "dirwalk",
+        "match": [
+            ""
+        ]
+    }
+}

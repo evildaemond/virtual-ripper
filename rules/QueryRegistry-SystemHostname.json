@@ -1,0 +1,12 @@
+{
+    "rulename": "Read Specific Registry Value - System Hostname",
+    "selector": "None",
+    "operation": "registry",
+    "rule": {
+        "matchtype": "fullpath",
+        "action": "registry_get_value",
+        "match": [
+            "HKLM:\\SYSTEM\\{currentControlSet}\\Services\\Tcpip\\Parameters\\Hostname"
+        ]
+    }
+}

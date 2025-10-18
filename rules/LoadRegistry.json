@@ -1,0 +1,16 @@
+{
+    "rulename": "Collect and Load Registry",
+    "selector": "None",
+    "operation": "filesystem",
+    "rule": {
+        "matchtype": "fullpath",
+        "action": "load",
+        "extractLocation": "registry",
+        "match": [
+            "Windows\\System32\\config\\SAM",
+            "Windows\\System32\\config\\SYSTEM",
+            "Windows\\System32\\config\\SECURITY",
+            "Windows\\System32\\config\\SOFTWARE"
+        ]
+    }
+}
