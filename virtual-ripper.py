@@ -572,7 +572,7 @@ class DiskBrowser(aiocmd.PromptToolkitCmd):
 						if dirpath == "":
 							outfile = "root" + "_" + "dirwalk" + '.txt'
 							#print(f"Max Depth: {maxdepth}")
-							await self.walk_dir(Output=False, outdir=outdir, filename=outfile, recursive=True, maxdepth=maxdepth)
+							await self.walk_dir(output=False, outdir=outdir, filename=outfile, recursive=True, maxdepth=maxdepth)
 						else:
 							outfile = dirpath.replace('\\', '-') + "_" + "dirwalk" + '.txt'
 							await self.walk_children(current=curpath, target=dirpath, output=False, outdir=outdir, filename=outfile, recursive=True, maxdepth=maxdepth)
@@ -722,7 +722,7 @@ class DiskBrowser(aiocmd.PromptToolkitCmd):
 							console = Console()
 							table = Table(title=path)
 							table.add_column("Name", style="cyan", no_wrap=True)
-							table.add_column("Value", style="magenta", no_wrap=True)
+							table.add_column("Value", style="white", no_wrap=True)
 							table.add_row(value, val)
 							console.print(table)
 
@@ -760,7 +760,7 @@ class DiskBrowser(aiocmd.PromptToolkitCmd):
 											console = Console()
 											table = Table(title=f"{m.replace('*', i)}\\{x}")
 											table.add_column("Name", style="cyan", no_wrap=True)
-											table.add_column("Value", style="magenta", no_wrap=True)
+											table.add_column("Value", style="white", no_wrap=True)
 											for item in enumOut:
 												table.add_row(str(item[0]), str(item[1]))
 											console.print(table)
@@ -795,7 +795,7 @@ class DiskBrowser(aiocmd.PromptToolkitCmd):
 										console = Console()
 										table = Table(title=path)
 										table.add_column("Name", style="cyan", no_wrap=True)
-										table.add_column("Value", style="magenta", no_wrap=True)
+										table.add_column("Value", style="white", no_wrap=True)
 										for item in enumOut:
 											table.add_row(str(item[0]), str(item[1]))
 										console.print(table)
@@ -873,7 +873,7 @@ class DiskBrowser(aiocmd.PromptToolkitCmd):
 		console = Console()
 		table = Table(title="Disk Fingerprint")
 		table.add_column("Attribute", style="cyan", no_wrap=True)
-		table.add_column("Value", style="magenta", no_wrap=False)
+		table.add_column("Value", style="white", no_wrap=False)
 		table.add_row("Disk Image", file_path)
 		table.add_row("Target Name", str(self.__target_name))
 		table.add_row("Disk Size", f"{disk_size_pretty} ({disk_size} bytes)")
@@ -887,7 +887,7 @@ class DiskBrowser(aiocmd.PromptToolkitCmd):
 			entries = listing[1]
 			table = Table(title=f"Partition {part_num} Root Directory Listing")
 			table.add_column("Type", style="cyan", no_wrap=True)
-			table.add_column("Name", style="magenta", no_wrap=False)
+			table.add_column("Name", style="white", no_wrap=False)
 			table.add_column("Size", no_wrap=True)
 			table.add_column("Created", no_wrap=True)
 			table.add_column("Modified", no_wrap=True)
