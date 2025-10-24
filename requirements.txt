@@ -1,5 +1,4 @@
 rich
 impacket
-hashlib
 argparse
 json

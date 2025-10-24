@@ -1,0 +1,12 @@
+{
+    "rulename": "Read Registry Values - Network List Profile Names",
+    "selector": "None",
+    "operation": "registry",
+    "rule": {
+        "matchtype": "fullpath",
+        "action": "registry_get_value",
+        "match": [
+            "HKLM:\\SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion\\NetworkList\\Profiles\\*\\ProfileName"
+        ]
+    }
+}

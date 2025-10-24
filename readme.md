@@ -8,17 +8,6 @@ Virtual Ripper is a rules based virtual disk scanner, that uses the base of [adi
 - Preset rules for basic extraction of registry information and directory walking
 - Automatic folder creation and file extraction
 
-## Requirements
-
-The script is written in Python and is meant to be an add-on for the original, there are some additonal python requirements.
-
-```text
-rich
-impacket
-argparse
-json
-```
-
 ## Installation
 
 ```bash
@@ -36,6 +25,19 @@ pip install -r requirements.txt
 ```bash
 python virtual-ripper.py -f file.vhdx
 ```
+
+Output will be structed in the folders location, under `loot`, named the same name as the filename, so it would be structured like
+
+```text
+virtual-ripper
+ |_ loot
+	|_ registry
+	|	|_ SAM
+	|	|_ SYSTEM
+	|	|_ SECURITY
+	|	|_ SOFTWARE
+	|_ dirwalk
+``` 
 
 ## Rules
 
@@ -65,8 +67,14 @@ The type of match used, this can come in different flavors depending, and allows
 
 On top of these, we can add match filters for certain areas or words, where the filter comes from another location, for example
 
-- `currentControlSet` - The currentControlSet for Reg in System
-- `wildcard` - The wildcard path for a certain directory location, so for example `\\users\\*`
+- `currentControlSet` - The currentControlSet for registry, done via `{currentControlSet}`
+- `wildcard` - The wildcard path for a certain directory location, so for example `\\Users\\*\\` or 
+
+For Registry Items, full paths need to be specified, this is done on the registry type you'd like to query. The prefix set is `HKLM:\\` as our initial base, then the registry type you want to read
+- `SYSTEM`
+- `SOFTWARE`
+- `SAM` - Not Implemented
+- `SECURITY` - Not Implemented
 
 #### Action
 

@@ -1,0 +1,13 @@
+{
+    "rulename": "Extract NTDS.dit",
+    "selector": "None",
+    "operation": "filesystem",
+    "rule": {
+        "matchtype": "fullpath",
+        "action": "extract",
+        "extractLocation": "ntds",
+        "match": [
+            "Windows\\NTDS\\ntds.dit"
+        ]
+    }
+}
